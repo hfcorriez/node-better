@@ -7,8 +7,7 @@ Require better for NodeJs
 In `PROJECT_ROOT/shared/libs/emoji`:
 
 ```javascript
-exports.encode = function() { /*...*/ }
-exports.decode = function() { /*...*/ }
+module.exports = function() { /*...*/ }
 ```
 
 Old way for use:
@@ -25,7 +24,7 @@ New way for use:
 var emoji = require('better')('shared/libs/emoji')
 ```
 
-> Just use it as in your project root dir.
+> Just pass file path as in your project root dir.
 
 # Install
 
