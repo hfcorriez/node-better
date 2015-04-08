@@ -4,7 +4,7 @@ var path = require('path')
 module.exports = better;
 
 better.path = function (filename) {
-  return path.join(root, filename);
+  return path.join(root, /\.js$/.test(filename) ? filename : filename + '.js');
 }
 
 function better(filename) {
